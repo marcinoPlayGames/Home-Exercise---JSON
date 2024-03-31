@@ -1,0 +1,17 @@
+{
+  "name": "remitly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "verifyJSON.js",
+  "scripts": {
+    "test": "mocha test/test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^5.1.0",
+    "esm": "^3.2.25",
+    "mocha": "^10.4.0"
+  }
+}
