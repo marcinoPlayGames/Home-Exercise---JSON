@@ -58,4 +58,34 @@ import('chai').then(module => {
             chai.expect(result).to.be.false;
         });
     });
+	
+	describe('verifyJSON function edge cases', () => {
+		it('should return false for an empty JSON object', () => {
+			const jsonData = {};
+			const result = verifyJSON(jsonData);
+			chai.expect(result).to.be.false;
+		});
+
+		it('should return false if PolicyDocument field is missing', () => {
+			const jsonData = {
+				"PolicyName": "root"
+			};
+			const result = verifyJSON(jsonData);
+			chai.expect(result).to.be.false;
+		});
+
+		it('should return false if Statement array is empty', () => {
+			const jsonData = {
+				"PolicyName": "root",
+				"PolicyDocument": {
+					"Version": "2012-10-17",
+					"Statement": []
+				}
+			};
+			const result = verifyJSON(jsonData);
+			chai.expect(result).to.be.false;
+		});
+
+		// Add more test cases for other edge cases
+	});
 });
