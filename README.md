@@ -8,7 +8,7 @@ This repository contains a JavaScript function to verify JSON data according to 
 
 1. Clone the repository to your local machine.
 2. Install Node.js if you haven't already.
-3. Run the following command to test the function:
+3. Run the following command to test the function (you need to be inside the same folder where this file is located):
 
    ```bash
    node verifyJSON.js
